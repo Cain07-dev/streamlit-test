@@ -1,29 +1,48 @@
-# 🎬 Movies Explorer
+# 날씨 정보 API 대시보드
 
-What makes a successful movie? Which movie genre performs best at the box office?
+이 프로젝트는 Streamlit을 사용하여 날씨, 자외선, 미세먼지 정보를 제공하는 대시보드입니다.
 
-These are some of the questions that may be answered by analyzing a large collection of movie data such as the one compiled from The Movie Database (TMDB). It serves as a valuable resource for investigating fundamental questions regarding their success with information on plot details, cast and crew composition, production budgets, box office revenues, etc.
+## 기능
 
-This data app shows a simple demonstration of an interactive data explorer that allow users to adjust parameter widgets and observe in real-time updates to data visualization.
+1. 날씨 정보
+   - 선택한 도시의 온도, 하늘 상태, 강수확률, 습도를 표시합니다.
 
-## Demo App
+2. 자외선 정보
+   - 선택한 시도의 오늘과 내일의 자외선 지수를 표시합니다.
+   - 자외선 지수에 따른 주의사항을 제공합니다.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://interactive-data-explorer-template.streamlit.app/)
+3. 미세먼지 정보
+   - 선택한 시도의 통합대기지수, 미세먼지(PM10), 초미세먼지(PM2.5) 상태와 수치를 표시합니다.
 
-## GitHub Codespaces
+## 사용된 라이브러리
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dataprofessor/movies-explorer?quickstart=1)
+- streamlit
+- matplotlib
+- numpy
+- openpyxl
 
-## Reference
+## 주요 파일
 
-- [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- `excel_read.py`: 엑셀 파일에서 시도의 코드와 좌표를 가져옵니다.
+- `api_weather.py`: 날씨 API 처리 
+- `api_uv.py`: 자외선 API 처리 
+- `api_dust.py`: 미세먼지 API 처리 
 
-## 공공데이터 활용
-날씨 정보
-https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084
-자외선
-https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15085288
-미세먼지
-https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073861
+## 작동
 
-  
+엑셀파일에서 시도의 이름, 코드, 좌표를 가져옵니다.
+선택된 시도의 날씨정보를 api를 사용해서 가져옵니다.
+
+## 공공데이터 활용 (사용한 API)
+
+날씨 정보 API
+
+[https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084]
+
+자외선 API
+
+[https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15085288]
+
+미세먼지 API
+
+[https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073861]
