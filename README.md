@@ -17,4 +17,13 @@ This data app shows a simple demonstration of an interactive data explorer that 
 ## Reference
 
 - [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+
+## 공공데이터 활용
+날씨 정보
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15084084
+자외선
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15085288
+미세먼지
+https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15073861
+
   
